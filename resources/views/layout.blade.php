@@ -1,19 +1,16 @@
-<!DOCTYPE html>
+<!doctype html>
+<head>
 
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Laravel</title>
-        @vite('resources/css/app.css')
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-
-        <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
-        <!-- Styles -->
-    </head>
-    <body class="dark:bg-black dark:text-white">
+    <title>Laravel From Scratch Blog</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    @vite('resources/css/app.css')
+    
+</head>
+<body style="font-family: Open Sans, sans-serif">
+    <section class="px-6 py-8">
+    <x-navigation></x-navigation>
     @yield('content')
-    </body>
-</html>
+    <x-footer></x-footer>
+    </section>
+</body>
