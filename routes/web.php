@@ -10,6 +10,7 @@ Route::get('/', function () {
     return view('home',
 [
     'posts'=> Post::all(),
+    'categories'=> Category::all(),
     ]);
 });
 
