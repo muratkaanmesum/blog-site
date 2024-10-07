@@ -1,12 +1,8 @@
 @extends('layout')
 
 @section('content')
-    <div class="w-4/5 m-auto">
-        <div class="text-2xl">Posts within {{$category->name}}</div>
-        <ul>
-            @foreach ($posts as $post)
-                <li class="list-decimal ml-8">{{$post->title}}</li>
-            @endforeach
-        </ul>
-    </div>
+    <div class="flex flex-col gap-2 items-center">
+        <div class="text-2xl">Posts within <strong>{{$category->name}}</strong> category</div>
+            <x-posts :posts="$posts"/>
+        </div>
 @endsection
