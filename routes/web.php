@@ -22,7 +22,7 @@ Route::get('post/{post}',function(Post $post) {
 });
 
 Route::get('category/{category}',function(Category $category) {
-    $posts = Post::where('id', $category->id)->get();
+    $posts = Post::where('category_id', $category->id)->get();
 
     return view('category',[
         'posts' => $posts,
